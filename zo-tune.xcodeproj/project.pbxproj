@@ -14,6 +14,7 @@
 		34FCB59D1C352E8E00A0B2CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34FCB59C1C352E8E00A0B2CE /* Images.xcassets */; };
 		34FCB5A01C352E8E00A0B2CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34FCB59E1C352E8E00A0B2CE /* LaunchScreen.xib */; };
 		34FCB5AC1C352E8F00A0B2CE /* zo_tuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5AB1C352E8F00A0B2CE /* zo_tuneTests.swift */; };
+		E34EEF931457D93748E9FA42 /* Pods_zo_tune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4CA263B0DD58582E908ED3 /* Pods_zo_tune.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,9 @@
 		34FCB5A51C352E8F00A0B2CE /* zo-tuneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zo-tuneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34FCB5AA1C352E8F00A0B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34FCB5AB1C352E8F00A0B2CE /* zo_tuneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zo_tuneTests.swift; sourceTree = "<group>"; };
+		8D4CA263B0DD58582E908ED3 /* Pods_zo_tune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zo_tune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF21589CA8C5A6A606C36F8 /* Pods-zo-tune.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zo-tune.release.xcconfig"; path = "Pods/Target Support Files/Pods-zo-tune/Pods-zo-tune.release.xcconfig"; sourceTree = "<group>"; };
+		D463A07292BD3DB98756A822 /* Pods-zo-tune.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zo-tune.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zo-tune/Pods-zo-tune.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E34EEF931457D93748E9FA42 /* Pods_zo_tune.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 				34FCB5901C352E8E00A0B2CE /* zo-tune */,
 				34FCB5A81C352E8F00A0B2CE /* zo-tuneTests */,
 				34FCB58F1C352E8E00A0B2CE /* Products */,
+				99C5EBE8A78EB187E54DF470 /* Pods */,
+				4801F9BF075A881254665B1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +122,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4801F9BF075A881254665B1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D4CA263B0DD58582E908ED3 /* Pods_zo_tune.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99C5EBE8A78EB187E54DF470 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D463A07292BD3DB98756A822 /* Pods-zo-tune.debug.xcconfig */,
+				CDF21589CA8C5A6A606C36F8 /* Pods-zo-tune.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34FCB5AF1C352E8F00A0B2CE /* Build configuration list for PBXNativeTarget "zo-tune" */;
 			buildPhases = (
+				26FF3626212855F58538A24B /* Check Pods Manifest.lock */,
 				34FCB58A1C352E8E00A0B2CE /* Sources */,
 				34FCB58B1C352E8E00A0B2CE /* Frameworks */,
 				34FCB58C1C352E8E00A0B2CE /* Resources */,
+				FA1947549BE5E8CCF4AD5A4B /* Embed Pods Frameworks */,
+				90419D6F6C7A1B9FF5B926BE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +236,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26FF3626212855F58538A24B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90419D6F6C7A1B9FF5B926BE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zo-tune/Pods-zo-tune-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA1947549BE5E8CCF4AD5A4B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zo-tune/Pods-zo-tune-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		34FCB58A1C352E8E00A0B2CE /* Sources */ = {
@@ -340,6 +415,7 @@
 		};
 		34FCB5B01C352E8F00A0B2CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D463A07292BD3DB98756A822 /* Pods-zo-tune.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "zo-tune/Info.plist";
@@ -350,6 +426,7 @@
 		};
 		34FCB5B11C352E8F00A0B2CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF21589CA8C5A6A606C36F8 /* Pods-zo-tune.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "zo-tune/Info.plist";
@@ -411,6 +488,7 @@
 				34FCB5B11C352E8F00A0B2CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34FCB5B21C352E8F00A0B2CE /* Build configuration list for PBXNativeTarget "zo-tuneTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +497,7 @@
 				34FCB5B41C352E8F00A0B2CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

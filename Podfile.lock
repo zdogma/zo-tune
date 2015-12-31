@@ -1,1 +1,14 @@
-COCOAPODS: 0.39.0
+PODS:
+  - Colours (5.12.0):
+    - Colours/ObjC (= 5.12.0)
+  - Colours/ObjC (5.12.0)
+
+DEPENDENCIES:
+  - Colours
+
+SPEC CHECKSUMS:
+  Colours: 4019e8eeb69d8840832eba1b3254abdbab4eec49
+
+PODFILE CHECKSUM: 683fd70e4bc2a6369c5c95a05b2714439efc53fb
+
+COCOAPODS: 1.0.0.beta.1
