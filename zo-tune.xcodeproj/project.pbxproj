@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3401B6481C35873700E1798C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401B6471C35873700E1798C /* Song.swift */; };
+		3401B6491C35873700E1798C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401B6471C35873700E1798C /* Song.swift */; };
+		3401B64B1C358B1F00E1798C /* PlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401B64A1C358B1F00E1798C /* PlayList.swift */; };
+		3401B64C1C358B1F00E1798C /* PlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401B64A1C358B1F00E1798C /* PlayList.swift */; };
 		34FCB5941C352E8E00A0B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5931C352E8E00A0B2CE /* AppDelegate.swift */; };
 		34FCB5961C352E8E00A0B2CE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5951C352E8E00A0B2CE /* FirstViewController.swift */; };
 		34FCB5981C352E8E00A0B2CE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5971C352E8E00A0B2CE /* SecondViewController.swift */; };
@@ -28,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3401B6471C35873700E1798C /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		3401B64A1C358B1F00E1798C /* PlayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayList.swift; sourceTree = "<group>"; };
 		34FCB58E1C352E8E00A0B2CE /* zo-tune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zo-tune.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34FCB5921C352E8E00A0B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34FCB5931C352E8E00A0B2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,8 @@
 				34FCB59C1C352E8E00A0B2CE /* Images.xcassets */,
 				34FCB59E1C352E8E00A0B2CE /* LaunchScreen.xib */,
 				34FCB5911C352E8E00A0B2CE /* Supporting Files */,
+				3401B6471C35873700E1798C /* Song.swift */,
+				3401B64A1C358B1F00E1798C /* PlayList.swift */,
 			);
 			path = "zo-tune";
 			sourceTree = "<group>";
@@ -290,6 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3401B6481C35873700E1798C /* Song.swift in Sources */,
+				3401B64B1C358B1F00E1798C /* PlayList.swift in Sources */,
 				34FCB5981C352E8E00A0B2CE /* SecondViewController.swift in Sources */,
 				34FCB5941C352E8E00A0B2CE /* AppDelegate.swift in Sources */,
 				34FCB5961C352E8E00A0B2CE /* FirstViewController.swift in Sources */,
@@ -300,6 +310,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3401B64C1C358B1F00E1798C /* PlayList.swift in Sources */,
+				3401B6491C35873700E1798C /* Song.swift in Sources */,
 				34FCB5AC1C352E8F00A0B2CE /* zo_tuneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
