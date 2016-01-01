@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  NewViewController.swift
 //  zo-tune
 //
 //  Created by Tomohiro Zoda on 2015/12/31.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class NewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
