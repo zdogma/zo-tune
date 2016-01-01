@@ -12,6 +12,8 @@
 		3401B64B1C358B1F00E1798C /* PlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401B64A1C358B1F00E1798C /* PlayList.swift */; };
 		3401B64C1C358B1F00E1798C /* PlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401B64A1C358B1F00E1798C /* PlayList.swift */; };
 		3401B6501C3610D000E1798C /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401B64F1C3610D000E1798C /* PlayViewController.swift */; };
+		3401B6521C36147600E1798C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401B6511C36147600E1798C /* Player.swift */; };
+		3401B6531C36147600E1798C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401B6511C36147600E1798C /* Player.swift */; };
 		34FCB5941C352E8E00A0B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5931C352E8E00A0B2CE /* AppDelegate.swift */; };
 		34FCB5961C352E8E00A0B2CE /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5951C352E8E00A0B2CE /* PlayListViewController.swift */; };
 		34FCB5981C352E8E00A0B2CE /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5971C352E8E00A0B2CE /* NewViewController.swift */; };
@@ -36,6 +38,7 @@
 		3401B6471C35873700E1798C /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		3401B64A1C358B1F00E1798C /* PlayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayList.swift; sourceTree = "<group>"; };
 		3401B64F1C3610D000E1798C /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		3401B6511C36147600E1798C /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		34FCB58E1C352E8E00A0B2CE /* zo-tune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zo-tune.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34FCB5921C352E8E00A0B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34FCB5931C352E8E00A0B2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 				34FCB5911C352E8E00A0B2CE /* Supporting Files */,
 				3401B6471C35873700E1798C /* Song.swift */,
 				3401B64A1C358B1F00E1798C /* PlayList.swift */,
+				3401B6511C36147600E1798C /* Player.swift */,
 			);
 			path = "zo-tune";
 			sourceTree = "<group>";
@@ -305,6 +309,7 @@
 				3401B64B1C358B1F00E1798C /* PlayList.swift in Sources */,
 				34FCB5981C352E8E00A0B2CE /* NewViewController.swift in Sources */,
 				34FCB5941C352E8E00A0B2CE /* AppDelegate.swift in Sources */,
+				3401B6521C36147600E1798C /* Player.swift in Sources */,
 				3401B6501C3610D000E1798C /* PlayViewController.swift in Sources */,
 				34FCB5961C352E8E00A0B2CE /* PlayListViewController.swift in Sources */,
 			);
@@ -314,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3401B6531C36147600E1798C /* Player.swift in Sources */,
 				3401B64C1C358B1F00E1798C /* PlayList.swift in Sources */,
 				3401B6491C35873700E1798C /* Song.swift in Sources */,
 				34FCB5AC1C352E8F00A0B2CE /* zo_tuneTests.swift in Sources */,
