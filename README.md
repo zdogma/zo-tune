@@ -3,15 +3,28 @@ zo-tune
 
 聴きたいプレイリストはその場で作る。  
 新しい音楽との過ごし方を提供する新感覚iOSアプリ。
+https://www.evernote.com/l/AFSiOnwZ725PDaaBdN8Ll8KW8aM-FpU8Wlo
 
 ## Requirement
 ```
-# comming soon
+# swift (~> 2.0 にしたい)
+Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)
+Target: x86_64-apple-darwin14.4.0
+
+# Xcode (~> 7 にしたい)
+6.4 (6E35b)
+
+# cocoapods
+1.0.0.beta.1
+
+# ruby
+2.3.0
 ```
 
 ## Install
 ```
-# comming soon
+git clone git@github.com:zdogma/zo-tune.git && cd zo-tune/
+pod install
 ```
 
 ## Contribution
