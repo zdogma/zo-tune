@@ -201,6 +201,8 @@
 		34FCB5861C352E8E00A0B2CE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Tomohiro Zoda";
 				TargetAttributes = {

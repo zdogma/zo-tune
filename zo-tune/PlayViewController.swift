@@ -9,8 +9,8 @@ class PlayViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         // DEBUG: response のチェックとかこの辺でやる
-        var albumsQuery: MPMediaQuery = MPMediaQuery.albumsQuery()
-        println(albumsQuery)
+        let albumsQuery: MPMediaQuery = MPMediaQuery.albumsQuery()
+        print(albumsQuery)
     }
     
     override func didReceiveMemoryWarning() {
