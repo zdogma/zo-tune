@@ -2,17 +2,17 @@ zo-tune
 ===
 
 聴きたいプレイリストはその場で作る。  
-新しい音楽との過ごし方を提供する新感覚iOSアプリ。
+新しい音楽との過ごし方を提供する新感覚iOSアプリ。  
 https://www.evernote.com/l/AFSiOnwZ725PDaaBdN8Ll8KW8aM-FpU8Wlo
 
 ## Requirement
 ```
-# swift (~> 2.0 にしたい)
-Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)
-Target: x86_64-apple-darwin14.4.0
+# swift
+Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)
+Target: x86_64-apple-darwin15.2.0
 
-# Xcode (~> 7 にしたい)
-6.4 (6E35b)
+# Xcode
+Version 7.2 (7C68)
 
 # cocoapods
 1.0.0.beta.1
