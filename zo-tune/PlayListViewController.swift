@@ -1,11 +1,3 @@
-//
-//  PlayListViewController.swift
-//  zo-tune
-//
-//  Created by Tomohiro Zoda on 2015/12/31.
-//  Copyright (c) 2015年 Tomohiro Zoda. All rights reserved.
-//
-
 import UIKit
 
 class PlayListViewController: UIViewController {
