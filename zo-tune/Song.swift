@@ -1,15 +1,6 @@
 import Foundation
+import RealmSwift
 
-class Song {
-    // MARK: Properties
-    var title:  String
-    var album:  String
-    var artist: String
-
-    // MARK: Initialization
-    init(title: String, album: String, artist: String) {
-        self.title  = title
-        self.album  = album
-        self.artist = artist
-    }
+class Song: Object {
+    dynamic var media_id: NSNumber = 0 // MPMediaItemPropertyPersistentID
 }

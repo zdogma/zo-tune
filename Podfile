@@ -3,5 +3,5 @@ use_frameworks!
 workspace 'zo-tune.xcworkspace'
 
 target 'zo-tune' do
-  pod 'Colours'
+  pod 'RealmSwift'
 end
