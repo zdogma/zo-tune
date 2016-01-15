@@ -15,10 +15,10 @@ Target: x86_64-apple-darwin15.2.0
 Version 7.2 (7C68)
 
 # cocoapods
-1.0.0.beta.1
+0.39.0
 
 # ruby
-2.3.0
+2.2.4
 ```
 
 ## Install
