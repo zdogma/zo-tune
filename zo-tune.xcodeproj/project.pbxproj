@@ -16,7 +16,7 @@
 		3490C6891C494843006DDEBF /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3490C6881C494843006DDEBF /* RealmSwift.framework */; };
 		34FCB5941C352E8E00A0B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5931C352E8E00A0B2CE /* AppDelegate.swift */; };
 		34FCB5961C352E8E00A0B2CE /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5951C352E8E00A0B2CE /* NewViewController.swift */; };
-		34FCB5981C352E8E00A0B2CE /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5971C352E8E00A0B2CE /* PlayListViewController.swift */; };
+		34FCB5981C352E8E00A0B2CE /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCB5971C352E8E00A0B2CE /* BooksViewController.swift */; };
 		34FCB59B1C352E8E00A0B2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34FCB5991C352E8E00A0B2CE /* Main.storyboard */; };
 		34FCB59D1C352E8E00A0B2CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34FCB59C1C352E8E00A0B2CE /* Images.xcassets */; };
 		34FCB5A01C352E8E00A0B2CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34FCB59E1C352E8E00A0B2CE /* LaunchScreen.xib */; };
@@ -44,7 +44,7 @@
 		34FCB5921C352E8E00A0B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34FCB5931C352E8E00A0B2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34FCB5951C352E8E00A0B2CE /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
-		34FCB5971C352E8E00A0B2CE /* PlayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListViewController.swift; sourceTree = "<group>"; };
+		34FCB5971C352E8E00A0B2CE /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		34FCB59A1C352E8E00A0B2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34FCB59C1C352E8E00A0B2CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		34FCB59F1C352E8E00A0B2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			children = (
 				34FCB5951C352E8E00A0B2CE /* NewViewController.swift */,
 				3401B64F1C3610D000E1798C /* PlayViewController.swift */,
-				34FCB5971C352E8E00A0B2CE /* PlayListViewController.swift */,
+				34FCB5971C352E8E00A0B2CE /* BooksViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -331,7 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3401B6481C35873700E1798C /* Song.swift in Sources */,
-				34FCB5981C352E8E00A0B2CE /* PlayListViewController.swift in Sources */,
+				34FCB5981C352E8E00A0B2CE /* BooksViewController.swift in Sources */,
 				348640921C492F7B0088574B /* Book.swift in Sources */,
 				34FCB5941C352E8E00A0B2CE /* AppDelegate.swift in Sources */,
 				3401B6501C3610D000E1798C /* PlayViewController.swift in Sources */,

@@ -12,22 +12,36 @@ class NewViewController: UIViewController, MPMediaPickerControllerDelegate {
         super.didReceiveMemoryWarning()
     }
 
+    override func viewDidAppear(animated: Bool) {
+    }
 
     @IBAction func pick(sender: AnyObject) {
         let picker = MPMediaPickerController()
         picker.delegate = self
         picker.allowsPickingMultipleItems = true
-
+        
         presentViewController(picker, animated: true, completion: nil)
     }
-
+    
     // メディアアイテムピッカーでアイテムを選択完了したときに呼び出される
     func mediaPicker(mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
+        if mediaItemCollection.items.isEmpty {
+            mediaPicker.dismissViewControllerAnimated(true, completion: nil)
+            // Booksに遷移したい
+        }
+    
         let realm = try! Realm()
 
         let newBook = Book()
-        // FIXME: タイトルを適切に埋め込む
-        newBook.title = "test"
+
+        // FIXME: 日付を扱うクラスを外出ししたい
+        let now = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+        dateFormatter.dateFormat = "yyyy/MM/dd_HH:mm:ss"
+
+        newBook.title = "Book \(dateFormatter.stringFromDate(now))"
+
         try! realm.write {
             realm.add(newBook)
 
@@ -37,19 +51,14 @@ class NewViewController: UIViewController, MPMediaPickerControllerDelegate {
                 newBook.songs.append(newSong)
             }
         }
-        
-        // DEBUG
-        for (index, song) in newBook.songs.enumerate() {
-            let myLabel: UILabel = UILabel(frame: CGRectMake(0,20,400,50))
-            myLabel.frame.origin.y = CGFloat(index * 20)
-            myLabel.text = "\(index + 1)曲目: \(song.media_id)"
-            self.view.addSubview(myLabel)
-        }
+
         mediaPicker.dismissViewControllerAnimated(true, completion: nil)
+        // TODO: Play画面に遷移したい
     }
     
     func mediaPickerDidCancel(mediaPicker: MPMediaPickerController) {
         mediaPicker.dismissViewControllerAnimated(true, completion: nil)
+        // TODO: Play画面に遷移したい
     }
 }
 
