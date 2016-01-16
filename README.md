@@ -20,6 +20,7 @@ Version 7.2 (7C68)
 # ruby
 2.2.4
 ```
+![](https://i.gyazo.com/9175c209886efaf143cb2317987e92c2.png)
 
 ## Install
 ```
