@@ -1,12 +1,5 @@
-//
-//  AppDelegate.swift
-//  zo-tune
-//
-//  Created by Tomohiro Zoda on 2015/12/31.
-//  Copyright (c) 2015年 Tomohiro Zoda. All rights reserved.
-//
-
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +8,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // FIXME: マイグレーションの記述を外出しする
+        let config = Realm.Configuration(
+            schemaVersion: 3,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 1) { }
+        })
+        Realm.Configuration.defaultConfiguration = config
+        
+        if let tabvc = self.window!.rootViewController as? UITabBarController {
+            // 初期タブをBooksに変更する
+            tabvc.selectedIndex = 1
+        }
+        
+//        let realm = try! Realm()
+//        try! realm.write {
+//            realm.deleteAll()
+//        }
         return true
     }
 
