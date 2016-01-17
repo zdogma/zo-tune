@@ -57,6 +57,7 @@
         <!--Books-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PlayList" id="8rJ-Kc-sve" customClass="BooksViewController" customModule="zo_tune" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
@@ -66,14 +67,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOl-HJ-xpB">
-                                <rect key="frame" x="14" y="46" width="99" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOl-HJ-xpB">
+                                <rect key="frame" x="30" y="45" width="90" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GXS-VX-mi3">
-                                <rect key="frame" x="0.0" y="75" width="600" height="525"/>
+                                <rect key="frame" x="0.0" y="75" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookTableCell" rowHeight="75" id="oYB-9g-KDq">
@@ -124,11 +125,35 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rde-iu-J3r">
+                                <rect key="frame" x="279" y="0.0" width="42" height="21"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gac-me-sZo">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvj-FA-HmJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Books" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcM-kB-znQ">
+                                <rect key="frame" x="274" y="40.5" width="52.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cOl-HJ-xpB" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="25" id="LNp-oF-8bU"/>
+                            <constraint firstItem="cOl-HJ-xpB" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="10" id="LNp-oF-8bU"/>
+                            <constraint firstItem="FcM-kB-znQ" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="QxU-O0-bxQ"/>
                             <constraint firstItem="cOl-HJ-xpB" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="25" id="YgC-SP-Sho"/>
+                            <constraint firstItem="FcM-kB-znQ" firstAttribute="top" secondItem="Rde-iu-J3r" secondAttribute="bottom" constant="20" id="oxI-jg-BXj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Books" image="Books" id="cPa-gy-q4n"/>
@@ -137,9 +162,8 @@
                         <outlet property="bookTableView" destination="GXS-VX-mi3" id="HYy-ru-8zF"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="-224"/>
+            <point key="canvasLocation" x="1200" y="-212"/>
         </scene>
         <!--Play-->
         <scene sceneID="d35-ab-eeq">
@@ -152,9 +176,83 @@
                     <view key="view" contentMode="scaleToFill" id="OTA-Ja-ras">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookを選択してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr0-ki-R2k">
+                                <rect key="frame" x="204" y="40" width="192" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L76-Lw-WKS">
+                                <rect key="frame" x="0.0" y="85" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="songTableCell" rowHeight="80" id="ukE-Oc-cMe">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ukE-Oc-cMe" id="CHn-Eg-Gbp">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8yB-VE-UOo">
+                                                    <rect key="frame" x="17" y="0.0" width="88" height="88"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="88" id="0xT-7F-wcX"/>
+                                                        <constraint firstAttribute="width" constant="88" id="cJX-cH-h12"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="再生時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CZ-zv-mRj">
+                                                    <rect key="frame" x="274" y="48" width="44" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="曲名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipv-lj-4Cp">
+                                                    <rect key="frame" x="121" y="13" width="34" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="再生回数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sx-uj-EJN">
+                                                    <rect key="frame" x="348" y="48" width="44" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="アーティスト名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTd-rG-KYJ">
+                                                    <rect key="frame" x="121" y="48" width="119" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7sx-uj-EJN" firstAttribute="top" secondItem="CHn-Eg-Gbp" secondAttribute="topMargin" constant="40" id="3gP-OV-aX8"/>
+                                                <constraint firstItem="7sx-uj-EJN" firstAttribute="leading" secondItem="5CZ-zv-mRj" secondAttribute="trailing" constant="30" id="bxg-25-sYl"/>
+                                                <constraint firstItem="PTd-rG-KYJ" firstAttribute="leading" secondItem="8yB-VE-UOo" secondAttribute="trailing" constant="15" id="c1t-ei-2CL"/>
+                                                <constraint firstItem="5CZ-zv-mRj" firstAttribute="top" secondItem="CHn-Eg-Gbp" secondAttribute="topMargin" constant="40" id="deQ-1y-W7R"/>
+                                                <constraint firstItem="ipv-lj-4Cp" firstAttribute="leading" secondItem="8yB-VE-UOo" secondAttribute="trailing" constant="15" id="fio-rU-AI8"/>
+                                                <constraint firstItem="PTd-rG-KYJ" firstAttribute="top" secondItem="CHn-Eg-Gbp" secondAttribute="topMargin" constant="40" id="kyz-yS-YJK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7sx-uj-EJN" secondAttribute="trailing" constant="200" id="nqY-nS-nPP"/>
+                                                <constraint firstItem="8yB-VE-UOo" firstAttribute="leading" secondItem="CHn-Eg-Gbp" secondAttribute="leadingMargin" constant="10" id="p9Z-3F-fIa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jr0-ki-R2k" firstAttribute="centerX" secondItem="OTA-Ja-ras" secondAttribute="centerX" id="1Ot-BX-Rht"/>
+                            <constraint firstItem="Jr0-ki-R2k" firstAttribute="top" secondItem="aEW-ws-Pmm" secondAttribute="bottom" constant="20" id="Uun-TC-wIA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="Play" id="jNj-aS-1O3"/>
+                    <connections>
+                        <outlet property="PlayViewLabel" destination="Jr0-ki-R2k" id="Hkz-Wo-1Jm"/>
+                        <outlet property="songTableView" destination="L76-Lw-WKS" id="Hbh-fX-jT0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfE-1h-5W3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

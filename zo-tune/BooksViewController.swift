@@ -52,7 +52,6 @@ class BooksViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-    // TODO: タップされたらそのBookを再生キューに入れる
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         
         let realm = try! Realm()
@@ -62,14 +61,22 @@ class BooksViewController: UIViewController, UITableViewDataSource, UITableViewD
         let player = MPMusicPlayerController.systemMusicPlayer()
       
         let media_ids = books[indexPath.row].songs.map { $0.media_id }
-        // FIXME: Book内の曲をすべてキューに入れたい
-        let media_id = media_ids.first
+        var combinedMediaItems = [MPMediaItem]()
 
-        let songQuery = MPMediaQuery()
-        let predicate = MPMediaPropertyPredicate(value: media_id, forProperty: MPMediaItemPropertyPersistentID)
-        songQuery.addFilterPredicate(predicate)
-        player.setQueueWithQuery(songQuery)
+        for media_id in media_ids {
+            let songQuery = MPMediaQuery()
+            let predicate = MPMediaPropertyPredicate(value: media_id, forProperty: MPMediaItemPropertyPersistentID)
+            songQuery.addFilterPredicate(predicate)
+            combinedMediaItems.append(songQuery.collections!.first!.items.first!)
+        }
+        let userMediaItemCollection = MPMediaItemCollection(items: combinedMediaItems)
+        player.setQueueWithItemCollection(userMediaItemCollection)
+        print(userMediaItemCollection.items.description)
         player.play()
+        
+        PlayingBook = books[indexPath.row]
+        self.tabBarController!.selectedIndex = 2;
+        
     }
 
     override func viewDidAppear(animated: Bool) {
