@@ -1,12 +1,14 @@
 import UIKit
 import RealmSwift
 
+// FIXME: グローバル変数での管理は良くない気がする
+var PlayingBook: Book?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // FIXME: マイグレーションの記述を外出しする
         let config = Realm.Configuration(
