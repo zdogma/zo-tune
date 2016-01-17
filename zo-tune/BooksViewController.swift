@@ -33,7 +33,11 @@ class BooksViewController: UIViewController, UITableViewDataSource, UITableViewD
         // FIXME: 最初の曲のアートワークを取っているのを、再生数の多い曲とかに直したい
         let imageView = table.viewWithTag(1) as! UIImageView
         let artwork = first_song.valueForProperty(MPMediaItemPropertyArtwork)
-        imageView.image = artwork?.imageWithSize(artwork!.bounds.size)
+        if (artwork != nil) {
+            imageView.image = artwork?.imageWithSize(artwork!.bounds.size)
+        } else {
+            imageView.image = UIImage(named: "NoImage")
+        }
         
         let label1 = table.viewWithTag(2) as! UILabel
         label1.text = books[indexPath.row].title
@@ -73,6 +77,9 @@ class BooksViewController: UIViewController, UITableViewDataSource, UITableViewD
         player.setQueueWithItemCollection(userMediaItemCollection)
         print(userMediaItemCollection.items.description)
         player.play()
+        
+        // 再選択した時にBOOKの最初から再生できるようにしている
+        player.skipToBeginning()
         
         PlayingBook = books[indexPath.row]
         self.tabBarController!.selectedIndex = 2;

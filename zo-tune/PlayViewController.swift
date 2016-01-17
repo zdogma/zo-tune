@@ -34,7 +34,11 @@ class PlayViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let imageView = table.viewWithTag(1) as! UIImageView
         let artwork = songs[indexPath.row].media().artwork
-        imageView.image = artwork?.imageWithSize(artwork!.bounds.size)
+        if (artwork != nil) {
+            imageView.image = artwork?.imageWithSize(artwork!.bounds.size)
+        } else {
+            imageView.image = UIImage(named: "NoImage")
+        }
         
         let song_title_label = table.viewWithTag(2) as! UILabel
         song_title_label.text = songs[indexPath.row].media().title

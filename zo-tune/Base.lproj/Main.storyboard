@@ -57,7 +57,6 @@
         <!--Books-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PlayList" id="8rJ-Kc-sve" customClass="BooksViewController" customModule="zo_tune" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
@@ -84,7 +83,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aw9-mR-W9s">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="NoImage" translatesAutoresizingMaskIntoConstraints="NO" id="aw9-mR-W9s">
                                                     <rect key="frame" x="13" y="0.0" width="75" height="74.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="RMW-ie-KOw"/>
@@ -162,6 +161,7 @@
                         <outlet property="bookTableView" destination="GXS-VX-mi3" id="HYy-ru-8zF"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="-212"/>
         </scene>
@@ -195,13 +195,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8yB-VE-UOo">
-                                                    <rect key="frame" x="17" y="0.0" width="88" height="88"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="88" id="0xT-7F-wcX"/>
-                                                        <constraint firstAttribute="width" constant="88" id="cJX-cH-h12"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="再生時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CZ-zv-mRj">
                                                     <rect key="frame" x="274" y="48" width="44" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -226,6 +219,13 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="NoImage" translatesAutoresizingMaskIntoConstraints="NO" id="8yB-VE-UOo">
+                                                    <rect key="frame" x="18" y="0.0" width="88" height="88"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="88" id="0xT-7F-wcX"/>
+                                                        <constraint firstAttribute="width" constant="88" id="cJX-cH-h12"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="7sx-uj-EJN" firstAttribute="top" secondItem="CHn-Eg-Gbp" secondAttribute="topMargin" constant="40" id="3gP-OV-aX8"/>
@@ -283,6 +283,7 @@
         <image name="Books" width="25" height="25"/>
         <image name="New" width="25" height="25"/>
         <image name="NewBackground" width="250" height="250"/>
+        <image name="NoImage" width="64" height="64"/>
         <image name="Play" width="25" height="25"/>
     </resources>
 </document>
